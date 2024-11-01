@@ -17,14 +17,14 @@ const Libros_component = () => {
 
   return (
     <>
-      <ul className="flex flex-wrap items-center justify-center gap-8 border mt-5 h-auto">
+      <ul className=" max-w-[1500px] border border-green-500 flex flex-wrap items-center justify-center gap-2 mt-5 ">
         {books.map((book) => (
-          <li key={book.id} className="w-72 h-4/5 border-red-600 flex flex-col justify-center items-center">
-            <div className="w-full flex justify-center h-80">
-            <img src={book.imagen_url} className="object-cover"></img>
+          <li key={book.id} className="w-72 md:w-auto md:h-auto flex flex-col md:flex-row justify-center items-center">
+            <div className="flex justify-center h-auto">
+            <img src={book.imagen_url} className=" w-72 md:h-[160px] md:w-[112px]"></img>
             </div>
-            <div className="w-56">
-              <h1 className="text-2xl ml-2">{book.titulo}</h1>
+            <div className="w-72 md:w-80 md:h-[160px] bg-zinc-200">
+              <h1 className="text-xl ml-2 font-bold">{book.titulo}</h1>
               <h2 className="text-lg ml-2">Autor: {book.autor}</h2>
               <h2 className="text-lg ml-2">Año de publicación: {book.anio_publicacion}</h2>
               <p className="ml-2">Genero: {book.genero}</p>
